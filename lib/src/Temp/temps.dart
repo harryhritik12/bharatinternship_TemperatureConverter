@@ -35,6 +35,22 @@ class TempState extends State<TempApp>{
 
      Container tempSwitch = Container(
       padding: EdgeInsets.all(20.0),
+      /*Switch(
+           value: forC, 
+            
+           onChanged:(e){
+            setState(() {
+              forC=!forC;
+            });
+           })*/
+           /*Checkbox(
+            value: forC, 
+            onChanged:(e){
+              setState(() {
+                forC=!forC;
+              });
+            }
+            ),*/
       child: Column(
         children: [
           Text("Choose Fahrenheit or Celsius"),
