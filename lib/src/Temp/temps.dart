@@ -33,49 +33,39 @@ class TempState extends State<TempApp>{
 
       );
 
-    Container tempSwitch=Container(
+     Container tempSwitch = Container(
       padding: EdgeInsets.all(20.0),
       child: Column(
         children: [
-          Text("Choose Farenhite or Celsius"),
-
-          /*Switch(
-           value: forC, 
-            
-           onChanged:(e){
-            setState(() {
-              forC=!forC;
-            });
-           })*/
-           /*Checkbox(
-            value: forC, 
-            onChanged:(e){
-              setState(() {
-                forC=!forC;
-              });
-            }
-            ),*/
-          const Text("F"),
-          Radio<bool>(
-            groupValue: forC,
-            value: false,
-            onChanged: (v){
-              setState(() {
-                forC=v!;
-              });
-            },
+          Text("Choose Fahrenheit or Celsius"),
+          Row(
+            children: [
+              Radio<bool>(
+                groupValue: forC,
+                value: false,
+                onChanged: (v) {
+                  setState(() {
+                    forC = v!;
+                  });
+                },
+              ),
+              const Text("F"),
+            ],
           ),
-          Text("C"),
-          Radio<bool>(
-            groupValue: forC,
-            value: true,
-            onChanged: (v){
-              setState(() {
-                forC=v!;
-              });
-            },
+          Row(
+            children: [
+              Radio<bool>(
+                groupValue: forC,
+                value: true,
+                onChanged: (v) {
+                  setState(() {
+                    forC = v!;
+                  });
+                },
+              ),
+              const Text("C"),
+            ],
           ),
-
         ],
       ),
     );
